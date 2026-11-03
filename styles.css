@@ -740,3 +740,246 @@ html {
     box-shadow: none;
   }
 }
+
+
+/* ============================================================ CUSTOM FOOTER */
+
+/* FOOTER BACKGROUND */
+.custom-footer {
+  background: var(--color-neutral);
+  color: var(--color-base-100);
+  padding: 70px 8% 25px;
+  margin-top: 80px;
+}
+
+/* FOOTER MAIN CONTAINER */
+.footer-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* FOOTER BRAND */
+.footer-brand h2 {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 15px;
+  color: var(--color-base-100);
+}
+
+/* FOOTER BRAND ACCENT */
+.footer-brand h2 span {
+  color: var(--color-accent);
+}
+
+/* FOOTER DESCRIPTION */
+.footer-brand p {
+  color: var(--color-pale-slate);
+  font-size: 14px;
+  line-height: 1.8;
+  max-width: 280px;
+}
+
+/* SOCIAL MEDIA CONTAINER */
+.footer-socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+/* SOCIAL MEDIA BUTTONS */
+.footer-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--color-secondary);
+  border-radius: 50%;
+  color: var(--color-base-100);
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* SOCIAL MEDIA HOVER ANIMATION */
+.footer-socials a:hover {
+  background: var(--color-base-100);
+  color: var(--color-neutral);
+  transform: translateY(-4px);
+}
+
+/* FOOTER NAVIGATION */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+/* FOOTER SECTION HEADINGS */
+.footer-links h3,
+.footer-contact h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--color-base-100);
+}
+
+/* FOOTER NAVIGATION LINKS */
+.footer-links a {
+  color: var(--color-pale-slate);
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* FOOTER NAVIGATION HOVER */
+.footer-links a:hover {
+  color: var(--color-base-100);
+  transform: translateX(5px);
+}
+
+/* FOOTER CONTACT TEXT */
+.footer-contact p {
+  color: var(--color-pale-slate);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* FOOTER CONTACT BUTTON */
+.footer-contact-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 22px;
+  background: var(--color-base-100);
+  color: var(--color-neutral);
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* FOOTER CONTACT BUTTON HOVER */
+.footer-contact-btn:hover {
+  background: var(--color-base-300);
+  color: var(--color-neutral);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.2);
+}
+
+/* FOOTER BOTTOM SECTION */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 60px auto 0;
+  padding-top: 25px;
+  border-top: 1px solid var(--color-secondary);
+}
+
+/* FOOTER COPYRIGHT */
+.footer-bottom p {
+  color: var(--color-pale-slate);
+  font-size: 13px;
+}
+
+/* BACK TO TOP BUTTON */
+.footer-top {
+  display: inline-block;
+  color: var(--color-pale-slate);
+  font-size: 13px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* BACK TO TOP HOVER */
+.footer-top:hover {
+  color: var(--color-base-100);
+  transform: translateY(-3px);
+}
+
+/* FOOTER MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+
+  /* MOBILE FOOTER SPACING */
+  .custom-footer {
+    padding: 50px 6% 25px;
+  }
+
+  /* MOBILE FOOTER LAYOUT */
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  /* MOBILE BOTTOM SECTION */
+  .footer-bottom {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    margin-top: 40px;
+  }
+}
+
+/* FOOTER REDUCED MOTION */
+@media (prefers-reduced-motion: reduce) {
+
+  /* DISABLE FOOTER ANIMATIONS */
+  .custom-footer a {
+    transition: none;
+  }
+
+  .custom-footer a:hover {
+    transform: none;
+  }
+}
+
+/* ============================================================ END CUSTOM FOOTER */
+
+/* ============================================================ FOOTER PHOTO CREDITS */
+
+.footer-credits {
+  max-width: 1200px;
+  margin: 25px auto 0;
+  color: var(--color-pale-slate);
+  font-size: 12px;
+}
+
+.footer-credits summary {
+  cursor: pointer;
+  padding: 10px 0;
+  transition: color 0.3s ease;
+}
+
+.footer-credits summary:hover {
+  color: var(--color-base-100);
+}
+
+.footer-credits ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.footer-credits li {
+  margin-bottom: 8px;
+  line-height: 1.7;
+}
+
+.footer-credits a {
+  color: var(--color-base-100);
+  text-decoration: underline;
+}
+
+.footer-credits a:hover {
+  color: var(--color-accent);
+}
+
+/* ============================================================ END FOOTER PHOTO CREDITS */
