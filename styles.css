@@ -441,6 +441,7 @@ main:has(#yearly:checked) .price-yearly {
   opacity: 1;
 }
 
+
 /* ============================================================ THE FEATURED PLAN
  *
  * The plan most clients pick wears a border of your three colors, which turns
@@ -680,5 +681,62 @@ html {
   .plan-featured,
   .lightbox img {
     animation: none;
+  }
+}
+
+
+/* ============================================================ HOVER ANIMATIONS */
+
+/* Buttons lift when hovered over */
+.btn {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.15);
+}
+
+/* Cards float upward */
+.card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgb(0 0 0 / 0.12);
+}
+
+/* Images zoom in slightly */
+.card figure {
+  overflow: hidden;
+}
+
+.card figure img {
+  transition: transform 0.5s ease;
+}
+
+.card:hover figure img {
+  transform: scale(1.05);
+}
+
+/* Navigation links move slightly */
+.menu a {
+  transition: transform 0.3s ease;
+}
+
+.menu a:hover {
+  transform: translateY(-2px);
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+
+  .btn:hover,
+  .card:hover,
+  .card:hover figure img,
+  .menu a:hover {
+    transform: none;
+    box-shadow: none;
   }
 }
